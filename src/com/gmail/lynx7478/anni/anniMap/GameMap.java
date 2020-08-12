@@ -398,13 +398,13 @@ public final class GameMap extends AnniMap implements Listener
 			}
 		}
 		//TODO: 1.13 stuff.
-		if(!VersionUtils.getVersion().contains("13"))
+		if(VersionUtils.above13())
 		{
-			brFurnace = Material.BURNING_FURNACE;
+			brFurnace = Material.LEGACY_BURNING_FURNACE;
 		}else
 		{
 			try {
-				brFurnace = (Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "LEGACY_BURNING_FURNACE");
+				brFurnace = (Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "BURNING_FURNACE");
 			} catch (ClassNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

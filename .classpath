@@ -6,7 +6,7 @@
 	<classpathentry kind="lib" path="D:/Documents/Java/Libraries/commons-io-2.5.jar"/>
 	<classpathentry kind="lib" path="D:/Documents/Java/Libraries/EssentialsGroupManager.jar"/>
 	<classpathentry kind="lib" path="D:/Documents/Java/Libraries/PermissionsEx-1.23.4.jar"/>
-	<classpathentry kind="lib" path="D:/Documents/Java/Libraries/spigot-1.8.8-R0.1-SNAPSHOT-latest.jar"/>
+	<classpathentry kind="lib" path="D:/Documents/Java/Libraries/spigot-1.16.1.jar"/>
 	<classpathentry kind="lib" path="D:/Documents/Java/Libraries/spigot-1.7.2-R0.4-SNAPSHOT-1339.jar"/>
 	<classpathentry kind="lib" path="D:/Documents/Java/Libraries/spigot-1.7.5-R0.1-SNAPSHOT-1387.jar"/>
 	<classpathentry kind="lib" path="D:/Documents/Java/Libraries/spigot-1.7.8-R0.1-SNAPSHOT.jar"/>
@@ -15,12 +15,16 @@
 	<classpathentry kind="lib" path="D:/Documents/Java/Libraries/spigot-1.8.3-R0.1-SNAPSHOT-latest.jar"/>
 	<classpathentry kind="lib" path="D:/Documents/Java/Libraries/spigot-1.8.4-R0.1-SNAPSHOT-latest.jar"/>
 	<classpathentry kind="lib" path="D:/Documents/Java/Libraries/spigot-1.8.5-R0.1-SNAPSHOT-latest.jar"/>
+	<classpathentry kind="lib" path="D:/Documents/Java/Libraries/spigot-1.8.8-R0.1-SNAPSHOT-latest.jar"/>
 	<classpathentry kind="lib" path="D:/Documents/Java/Libraries/spigot-1.8-R0.1-SNAPSHOT-latest.jar"/>
 	<classpathentry kind="lib" path="D:/Documents/Java/Libraries/spigot-1.9.4-R0.1-SNAPSHOT-latest.jar"/>
 	<classpathentry kind="lib" path="D:/Documents/Java/Libraries/spigot-1.9-R0.1-SNAPSHOT-latest.jar"/>
 	<classpathentry kind="lib" path="D:/Documents/Java/Libraries/spigot-1.10.2-R0.1-SNAPSHOT-latest.jar"/>
 	<classpathentry kind="lib" path="D:/Documents/Java/Libraries/spigot-1.10-R0.1-SNAPSHOT-latest.jar"/>
+	<classpathentry kind="lib" path="D:/Documents/Java/Libraries/spigot-1.11.1.jar"/>
+	<classpathentry kind="lib" path="D:/Documents/Java/Libraries/spigot-1.11.2.jar"/>
 	<classpathentry kind="lib" path="D:/Documents/Java/Libraries/spigot-1.11.jar"/>
+	<classpathentry kind="lib" path="D:/Documents/Java/Libraries/spigot-1.12.1.jar"/>
 	<classpathentry kind="lib" path="D:/Documents/Java/Libraries/spigot-1.12.2.jar"/>
 	<classpathentry kind="lib" path="D:/Documents/Java/Libraries/spigot-1.12.jar"/>
 	<classpathentry kind="lib" path="D:/Documents/Java/Libraries/spigot-1.13.1.jar"/>
@@ -34,6 +38,5 @@
 	<classpathentry kind="lib" path="D:/Documents/Java/Libraries/spigot-1.15.1.jar"/>
 	<classpathentry kind="lib" path="D:/Documents/Java/Libraries/spigot-1.15.2.jar"/>
 	<classpathentry kind="lib" path="D:/Documents/Java/Libraries/spigot-1.15.jar"/>
-	<classpathentry kind="lib" path="D:/Documents/Java/Libraries/spigot-1.16.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -16,7 +16,7 @@ public enum CustomItem
 	VOTEMAP(ChatColor.AQUA+"Right click to vote for a map",Material.GRASS,(byte)0,true,null),
 	TEAMMAP(ChatColor.AQUA+"Right click to join a team",Material.NETHER_STAR,(byte)0,true,null),
 	MAPBUILDER(ChatColor.AQUA+"Right click to open the map builder",Material.DIAMOND_PICKAXE,(byte)0,true,null),
-	BREWINGSHOP(ChatColor.AQUA+"Brewing Shop Helper",Material.BREWING_STAND_ITEM,(byte)0,true, new String[] 
+	BREWINGSHOP(ChatColor.AQUA+"Brewing Shop Helper",Material.GLASS_BOTTLE,(byte)0,true, new String[] 
 							{
 								ChatColor.DARK_PURPLE+"Right click to add a brewing shop.",
 								ChatColor.DARK_PURPLE+"Left click to remove a brewing shop."
@@ -26,7 +26,7 @@ public enum CustomItem
 								ChatColor.DARK_PURPLE+"Right click to add a weapon shop.",
 								ChatColor.DARK_PURPLE+"Left click to remove a weapon shop."
 							}),
-	ENDERFURNACE(ChatColor.AQUA+"Ender Furnace Helper",Material.EYE_OF_ENDER,(byte)0,true, new String[] 
+	ENDERFURNACE(ChatColor.AQUA+"Ender Furnace Helper", Material.FURNACE ,(byte)0,true, new String[] 
 							{
 								ChatColor.DARK_PURPLE+"Right click to add an ender furnace.",
 								ChatColor.DARK_PURPLE+"Left click to remove an ender furnace."
@@ -45,7 +45,7 @@ public enum CustomItem
 								ChatColor.DARK_PURPLE+"Left click a block to add it as a diamond.",
 								ChatColor.DARK_PURPLE+"Right click a block to remove it as a diamond."
 							}),
-	UNPLACEABLEBLOCKSWAND(ChatColor.AQUA+"Unplaceable Blocks Wand",Material.DIAMOND_SPADE,(byte)0,true, new String[] 
+	UNPLACEABLEBLOCKSWAND(ChatColor.AQUA+"Unplaceable Blocks Wand",Material.DIAMOND_HOE,(byte)0,true, new String[] 
 							{
 								ChatColor.DARK_PURPLE+"Left click a block to add it as unplaceable",
 								ChatColor.DARK_PURPLE+"Right click a block to remove it as unplaceable."

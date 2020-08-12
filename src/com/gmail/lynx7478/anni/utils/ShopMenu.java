@@ -89,8 +89,8 @@ public class ShopMenu
 					cost = 5;
 					break;
 				case 11:
-					icon = new ItemStack(Material.RAW_BEEF,3);
-					cost = 5;
+					icon = new ItemStack(Material.COOKED_BEEF,3);
+					cost = 10;
 					break;
 				case 12:
 					icon = new ItemStack(Material.BOOK,1);
@@ -119,10 +119,10 @@ public class ShopMenu
 					break;
 
 				case 0:
-					if(!VersionUtils.getVersion().contains("13"))
-						icon = new ItemStack(Material.BREWING_STAND_ITEM,1);
+					if(VersionUtils.above13())
+						icon = new ItemStack(Material.BREWING_STAND,1);
 					else
-						icon = new ItemStack((Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "BREWING_STAND"),1);
+						icon = new ItemStack((Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "BREWING_STAND_ITEM"),1);
 					cost = 10;
 					break;
 				case 1:
@@ -130,10 +130,10 @@ public class ShopMenu
 					cost = 1;
 					break;
 				case 2:
-					if(!VersionUtils.getVersion().contains("13"))
-						icon = new ItemStack(Material.NETHER_STALK,1);
+					if(VersionUtils.above13())
+						icon = new ItemStack(Material.LEGACY_NETHER_STALK,1);
 					else
-						icon = new ItemStack((Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "LEGACY_NETHER_STALK"),1);
+						icon = new ItemStack((Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "NETHER_STALK"),1);
 					cost = 5;
 					break;
 				//LINE 1
@@ -155,10 +155,10 @@ public class ShopMenu
 					cost = 3;
 					break;
 				case 12:
-					if(!VersionUtils.getVersion().contains("13"))
-						icon = new ItemStack(Material.SULPHUR,1);
+					if(VersionUtils.above13())
+						icon = new ItemStack(Material.LEGACY_SULPHUR,1);
 					else
-						icon = new ItemStack((Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "LEGACY_SULPHUR"),1);
+						icon = new ItemStack((Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "SULPHUR"),1);
 					cost = 3;
 					break;
 				//LINE 2
@@ -175,10 +175,10 @@ public class ShopMenu
 					cost = 2;
 					break;
 				case 20:
-					if(!VersionUtils.getVersion().contains("13"))
-						icon = new ItemStack(Material.SPECKLED_MELON,1);
+					if(VersionUtils.above13())
+						icon = new ItemStack(Material.LEGACY_SPECKLED_MELON,1);
 					else
-						icon = new ItemStack((Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "LEGACY_SPECKLED_MELON"),1);
+						icon = new ItemStack((Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "SPECKLED_MELON"),1);
 					cost = 2;
 					break;
 				case 21:

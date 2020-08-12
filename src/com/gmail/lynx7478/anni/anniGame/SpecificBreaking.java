@@ -22,9 +22,16 @@ public class SpecificBreaking implements Listener {
 	
 	public SpecificBreaking() throws ClassNotFoundException
 	{
-		if(!VersionUtils.getVersion().contains("13"))
+		if(VersionUtils.above13())
 		{
 			pickaxe = new ArrayList<Material>();
+			for(Material a : Material.values())
+			{
+				if(a.name().contains("IRON_DOOR"))
+				{
+					pickaxe.add(a);
+				}
+			}
 			ItemUtils.addToList(pickaxe, 
 			Material.BRICK,
 			Material.BRICK_STAIRS,
@@ -40,9 +47,7 @@ public class SpecificBreaking implements Listener {
 			Material.DIAMOND_BLOCK,
 			Material.EMERALD_BLOCK,
 			Material.REDSTONE_BLOCK,
-			Material.ANVIL,
-			Material.IRON_DOOR,
-			Material.IRON_DOOR_BLOCK
+			Material.ANVIL
 					);
 			for(Material a : Material.values())
 			{
@@ -55,19 +60,14 @@ public class SpecificBreaking implements Listener {
 			axe = new ArrayList<Material>();
 			for(Material a : Material.values())
 			{
-				if(a.name().contains("WOOD"))
+				if(a.name().contains("WOOD") || a.name().contains("FENCE") || a.name().contains("LOG"))
 				{
 					axe.add(a);
 				}
 			}
-			ItemUtils.addToList(axe, 
-					Material.FENCE,
-					Material.FENCE_GATE,
-					Material.LOG,
-					Material.LOG_2,
-					Material.FENCE,
-					Material.FENCE_GATE,
+			ItemUtils.addToList(axe,
 					Material.LADDER
+					
 					);
 			
 			shovel = new ArrayList<Material>();
@@ -77,16 +77,21 @@ public class SpecificBreaking implements Listener {
 					Material.SOUL_SAND,
 					Material.GRAVEL,
 					Material.CLAY,
-					Material.SOIL,
+					Material.LEGACY_SOIL,
 					Material.SAND,
-					Material.MYCEL
+					Material.LEGACY_MYCEL
 					);
 			
 			sword = new ArrayList<Material>();
+			for(Material a : Material.values())
+			{
+				if(a.name().contains("LEAVES"))
+				{
+					sword.add(a);
+				}
+			}
 			ItemUtils.addToList(sword, 
-					Material.LEAVES,
-					Material.LEAVES_2,
-					Material.MELON_BLOCK,
+					Material.MELON,
 					Material.MELON_STEM
 					);
 			
@@ -119,7 +124,7 @@ public class SpecificBreaking implements Listener {
 			Material.REDSTONE_BLOCK,
 			Material.ANVIL,
 			Material.IRON_DOOR,
-			(Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "LEGACY_IRON_DOOR_BLOCK")
+			(Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "IRON_DOOR_BLOCK")
 					);
 			for(Material a : Material.values())
 			{
@@ -138,10 +143,10 @@ public class SpecificBreaking implements Listener {
 				}
 			}
 			ItemUtils.addToList(axe, 
-					(Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "LEGACY_FENCE"),
-					(Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "LEGACY_FENCE_GATE"),
-					(Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "LEGACY_LOG"),
-					(Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "LEGACY_LOG_2"),
+					(Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "FENCE"),
+					(Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "FENCE_GATE"),
+					(Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "LOG"),
+					(Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "LOG_2"),
 					Material.LADDER
 					);
 			
@@ -152,16 +157,16 @@ public class SpecificBreaking implements Listener {
 					Material.SOUL_SAND,
 					Material.GRAVEL,
 					Material.CLAY,
-					(Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "LEGACY_SOIL"),
+					(Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "SOIL"),
 					Material.SAND,
-					(Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "LEGACY_MYCEL")
+					(Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "MYCEL")
 					);
 			
 			sword = new ArrayList<Material>();
 			ItemUtils.addToList(sword, 
-					(Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "LEGACY_LEAVES"),
-					(Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "LEGACY_LEAVES_2"),
-					(Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "LEGACY_MELON_BLOCK"),
+					(Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "LEAVES"),
+					(Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "LEAVES_2"),
+					(Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "MELON_BLOCK"),
 					Material.MELON_STEM
 					);
 			

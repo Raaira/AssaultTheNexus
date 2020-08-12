@@ -24,13 +24,13 @@ public class CivilianKit extends Kit
 	public boolean Initialize()
 	{
 		Material mat = null;
-		if(!VersionUtils.getVersion().contains("13"))
+		if(VersionUtils.above13())
 		{
-			mat = Material.WORKBENCH;
+			mat = Material.CRAFTING_TABLE;
 		}else
 		{
 			try {
-				mat = (Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "CRAFTING_TABLE");
+				mat = (Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "WORKBENCH");
 			} catch (ClassNotFoundException e) {
 				e.printStackTrace();
 			}
@@ -49,13 +49,13 @@ public class CivilianKit extends Kit
 	public IconPackage getIconPackage()
 	{
 		Material mat = null;
-		if(!VersionUtils.getVersion().contains("13"))
+		if(VersionUtils.above13())
 		{
-			mat = Material.WORKBENCH;
+			mat = Material.CRAFTING_TABLE;
 		}else
 		{
 			try {
-				mat = (Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "CRAFTING_TABLE");
+				mat = (Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "WORKBENCH");
 			} catch (ClassNotFoundException e) {
 				e.printStackTrace();
 			}

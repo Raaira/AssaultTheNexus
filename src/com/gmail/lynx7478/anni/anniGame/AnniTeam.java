@@ -95,7 +95,7 @@ public final class AnniTeam
 		scoreboardTeam.setPrefix(this.getColor().toString());
 		if(GameVars.getHideTags())
 		{
-			if(VersionUtils.getVersion().contains("1_8") || VersionUtils.getVersion().contains("1_9") || VersionUtils.getVersion().contains("1_10") || VersionUtils.getVersion().contains("1_11") || VersionUtils.getVersion().contains("1_12"))
+			if(VersionUtils.above9())
 			{
 				scoreboardTeam.setNameTagVisibility(NameTagVisibility.HIDE_FOR_OTHER_TEAMS);
 			}else

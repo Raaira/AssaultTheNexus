@@ -332,12 +332,12 @@ public class KitLoading implements Listener, CommandExecutor
 		    {
 			    if(KitUtils.isSoulbound(stack))
 			    {
-				    if(!VersionUtils.getVersion().contains("v1_9") && !VersionUtils.getVersion().contains("v1_11") && !VersionUtils.getVersion().contains("v1_10") && !VersionUtils.getVersion().contains("v1_11") && !VersionUtils.getVersion().contains("v1_12")){
-				    	player.playSound(player.getLocation(), Sound.BLAZE_HIT, 1.0F, 0.3F);
+				    if(VersionUtils.above9()){
+				    	player.playSound(player.getLocation(), Sound.ENTITY_BLAZE_HURT, 1.0F, 0.3F);
 				    }else{
 						try {
 							Class<Enum> cls = (Class<Enum>) Class.forName("org.bukkit.Sound");
-					    	player.playSound(player.getLocation(), (Sound) Enum.valueOf(cls, "ENTITY_BLAZE_HURT"), 1.0F, 0.3F);
+					    	player.playSound(player.getLocation(), (Sound) Enum.valueOf(cls, "BLAZE_HURT"), 1.0F, 0.3F);
 						} catch (ClassNotFoundException e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();

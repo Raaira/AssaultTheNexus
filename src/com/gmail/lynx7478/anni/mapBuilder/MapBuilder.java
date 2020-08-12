@@ -160,12 +160,12 @@ public class MapBuilder implements Listener
 			new ItemStack(Material.BLAZE_ROD), ChatColor.GREEN+"Click to get the",ChatColor.GREEN+"Area Helper Wand"));
 		//TODO: 1.13 Stuff.
 		Material bed;
-		if(!VersionUtils.getVersion().contains("13"))
+		if(VersionUtils.above13())
 		{
-			bed = Material.BED;
+			bed = Material.RED_BED;
 		}else
 		{
-			bed = (Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "RED_BED");
+			bed = (Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "BED");
 		}
 		this.items.put(X.Spawns,new ActionMenuItem("Set Team Spawns", new ItemClickHandler(){
 
@@ -334,15 +334,15 @@ public class MapBuilder implements Listener
 				};
 				setPlayerMeta(event.getPlayer(),"TeamHandler",obj);
 				event.setWillClose(true);
-			}},new ItemStack(Material.SIGN),ChatColor.GREEN+"Click to set:",ChatColor.GREEN+"Team Join Signs"));
+			}},new ItemStack(Material.CHEST),ChatColor.GREEN+"Click to set:",ChatColor.GREEN+"Team Join Signs"));
 		
 		Material br;
-		if(!VersionUtils.getVersion().contains("13"))
+		if(VersionUtils.above13())
 		{
-			br = Material.BREWING_STAND_ITEM;
+			br = Material.BREWING_STAND;
 		}else
 		{
-			br = (Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "BREWING_STAND");
+			br = (Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "BREWING_STAND_ITEM");
 		}
 		this.items.put(X.BrewingShop, new ActionMenuItem("Set Brewing Shop", new ItemClickHandler(){
 
@@ -372,12 +372,12 @@ public class MapBuilder implements Listener
 			}},new ItemStack(Material.DIAMOND),ChatColor.GREEN+"Click to set:",ChatColor.GREEN+"Diamond Spawns"));
 		
 		Material eye;
-		if(!VersionUtils.getVersion().contains("13"))
+		if(VersionUtils.above13())
 		{
-			eye = Material.EYE_OF_ENDER;
+			eye = Material.ENDER_EYE;
 		}else
 		{
-			eye = (Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "ENDER_EYE");
+			eye = (Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "EYE_OF_ENDER");
 		}
 		this.items.put(X.EnderFurnaces, new ActionMenuItem("Set Ender Furnace", new ItemClickHandler(){
 			@Override
@@ -388,12 +388,12 @@ public class MapBuilder implements Listener
 			}},new ItemStack(eye),ChatColor.GREEN+"Click to set:",ChatColor.GREEN+"Ender Furnaces"));
 		
 		Material watch;
-		if(!VersionUtils.getVersion().contains("13"))
+		if(VersionUtils.above13())
 		{
-			watch = Material.WATCH;
+			watch = Material.CLOCK;
 		}else
 		{
-			watch = (Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "CLOCK");
+			watch = (Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "WATCH");
 		}
 		this.items.put(X.PhaseTime, new ActionMenuItem("Set Phase Time", new ItemClickHandler(){
 
@@ -440,12 +440,12 @@ public class MapBuilder implements Listener
 			}},new ItemStack(Material.STICK),ChatColor.GREEN+"Click to setup:",ChatColor.GREEN+"Regenerating Blocks"));
 		
 		Material ds;
-		if(!VersionUtils.getVersion().contains("13"))
+		if(VersionUtils.above13())
 		{
-			ds = Material.DIAMOND_SPADE;
+			ds = Material.DIAMOND_SHOVEL;
 		}else
 		{
-			ds = (Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "DIAMOND_SHOVEL");
+			ds = (Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "DIAMOND_SPADE");
 		}
 		this.items.put(X.UnplaceableBlockWand, new ActionMenuItem("Unplaceable Block Wand", new ItemClickHandler(){
 			@Override
@@ -584,12 +584,12 @@ public class MapBuilder implements Listener
 		menu.setItem(12, this.items.get(X.AreaWand));
 		
 		Material gls;
-		if(!VersionUtils.getVersion().contains("13"))
+		if(VersionUtils.above13())
 		{
-			gls = Material.STAINED_GLASS_PANE;
+			gls = Material.WHITE_STAINED_GLASS_PANE;
 		}else
 		{
-			gls = (Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "WHITE_STAINED_GLASS_PANE");
+			gls = (Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "STAINED_GLASS_PANE");
 		}
 		menu.setItem(13, new ActionMenuItem("Back to Main Menu",new ItemClickHandler(){
 
@@ -642,12 +642,12 @@ public class MapBuilder implements Listener
 	{
 		final ItemMenu mainMenu = wrap.main;
 		Material wl;
-		if(!VersionUtils.getVersion().contains("13"))
+		if(VersionUtils.above13())
 		{
-			wl = Material.WOOL;
+			wl = Material.WHITE_WOOL;
 		}else
 		{
-			wl = (Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "WHITE_WOOL");
+			wl = (Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "WOOL");
 		}
 		ActionMenuItem lobby = new ActionMenuItem("Set Lobby Location", new ItemClickHandler(){
 			@Override

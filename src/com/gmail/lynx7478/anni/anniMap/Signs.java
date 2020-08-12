@@ -28,6 +28,7 @@ import com.gmail.lynx7478.anni.main.Lang;
 import com.gmail.lynx7478.anni.utils.Loc;
 import com.gmail.lynx7478.anni.utils.MapKey;
 import com.gmail.lynx7478.anni.utils.ShopMenu;
+import com.gmail.lynx7478.anni.utils.VersionUtils;
 
 public final class Signs implements Iterable<AnniSign>, Listener
 {
@@ -91,19 +92,36 @@ public final class Signs implements Iterable<AnniSign>, Listener
 				AnniTeam team = sign.getType().getTeam();
 				lore = Lang.TEAMSIGN.toStringArray(team.getExternalColoredName());
 			}
-			placeSignInWorld(sign,lore);
+			try {
+				placeSignInWorld(sign,lore);
+			} catch (ClassNotFoundException e) {
+				e.printStackTrace();
+			}
 			signs.put(key, sign);
 			return true;
 		}
 		return false;
 	}
 	
-	private void placeSignInWorld(AnniSign asign, String[] lore)
+	private void placeSignInWorld(AnniSign asign, String[] lore) throws ClassNotFoundException
 	{
 		Location loc = asign.getLocation().toLocation();
 		Block block = loc.getWorld().getBlockAt(loc);//asign.getLocation().toLocation().getBlock();
-		if(block.getType() != Material.WALL_SIGN && block.getType() != Material.SIGN_POST)
-			block.getWorld().getBlockAt(loc).setType(asign.isSignPost() ? Material.SIGN_POST : Material.WALL_SIGN);
+		if(!block.getType().name().contains("SIGN"))
+		{
+			if(VersionUtils.above9())
+			{
+				block.getWorld().getBlockAt(loc).setType(asign.isSignPost() ? Material.LEGACY_SIGN_POST : Material.LEGACY_WALL_SIGN);
+			}else
+			{
+				Material a;
+				Material b;
+				a = (Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "SIGN_POST");
+				b = (Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "WALL_SIGN");
+				
+				block.getWorld().getBlockAt(loc).setType(asign.isSignPost() ? a : b);
+			}
+		}
 		Sign sign = (Sign)block.getState();
 		if(sign != null)
 		{
@@ -137,7 +155,7 @@ public final class Signs implements Iterable<AnniSign>, Listener
 			Block b = event.getClickedBlock();
 			if(b != null)
 			{
-				if(b.getType() == Material.WALL_SIGN || b.getType() == Material.SIGN_POST)
+				if(b.getType().name().contains("SIGN"))
 				{
 					final Location loc = b.getLocation();
 					final Player p = event.getPlayer();
@@ -172,7 +190,7 @@ public final class Signs implements Iterable<AnniSign>, Listener
 	{
 		if(event.getBlock() != null && event.getPlayer().getGameMode() != GameMode.CREATIVE)
 		{
-			if(event.getBlock().getType() == Material.WALL_SIGN || event.getBlock().getType() == Material.SIGN_POST)
+			if(event.getBlock().getType().name().contains("SIGN"))
 			{
 				MapKey key = MapKey.getKey(event.getBlock().getLocation());
 				if(this.signs.containsKey(key))

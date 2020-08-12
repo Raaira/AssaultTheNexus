@@ -89,9 +89,10 @@ public class TeamBlock
 	{
 		@SuppressWarnings("deprecation")
 		ItemStack stack;
-		if(!VersionUtils.getVersion().contains("13"))
+		if(!VersionUtils.above13())
 		{
-			stack = new ItemStack(Material.WOOL,1,(short)0,datavalue);
+			Material a = (Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "WOOL");
+			stack = new ItemStack(a,1,(short)0,datavalue);
 		}else
 		{
 			Material mat = null;

@@ -76,12 +76,12 @@ public class BossRewards implements Listener {
 	private ItemStack finish() throws ClassNotFoundException
 	{
 		ItemStack a;
-		if(!VersionUtils.getVersion().contains("13"))
+		if(VersionUtils.above13())
 		{
-			a = new ItemStack(Material.WOOL, 1, (byte) 5);
+			a = new ItemStack(Material.GREEN_WOOL);
 		}else
 		{
-			a = new ItemStack((Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "GREEN_WOOL"));
+			a = new ItemStack((Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "WOOL"), 1, (byte) 5);
 		}
 		ItemMeta m = a.getItemMeta();
 		m.setDisplayName(ChatColor.GREEN+"Finish");
@@ -92,12 +92,12 @@ public class BossRewards implements Listener {
 	private ItemStack discard() throws ClassNotFoundException
 	{
 		ItemStack a;
-		if(!VersionUtils.getVersion().contains("13"))
+		if(VersionUtils.above13())
 		{
-			a = new ItemStack(Material.WOOL, 1, (byte) 14);
+			a = new ItemStack(Material.RED_WOOL);
 		}else
 		{
-			a = new ItemStack((Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "RED_WOOL"));
+			a = new ItemStack((Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "WOOL"), 1, (byte) 14);
 		}
 		ItemMeta m = a.getItemMeta();
 		m.setDisplayName(ChatColor.RED+"Discard");

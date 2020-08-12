@@ -216,12 +216,12 @@ public final class RegeneratingBlocks implements Listener
 						if(!e.isCancelled())
 						{
 							if(e.getXP() > 0)
-								if(!VersionUtils.getVersion().contains("v1_9") && !VersionUtils.getVersion().contains("v1_10") && !VersionUtils.getVersion().contains("v1_11")){
-									p.playSound(p.getLocation(), Sound.ORB_PICKUP, 0.6F, rand.nextFloat());
+								if(VersionUtils.above9()){
+									p.playSound(p.getLocation(), Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.6F, rand.nextFloat());
 								}else{
 									try {
 										Class<Enum> cls = (Class<Enum>) Class.forName("org.bukkit.Sound");
-										p.playSound(p.getLocation(), (Sound) Enum.valueOf(cls, "ENTITY_EXPERIENCE_ORB_PICKUP"), 0.6F, rand.nextFloat());
+										p.playSound(p.getLocation(), (Sound) Enum.valueOf(cls, "ORB_PICKUP"), 0.6F, rand.nextFloat());
 									} catch (ClassNotFoundException e1) {
 										e1.printStackTrace();
 									}
@@ -287,12 +287,12 @@ public final class RegeneratingBlocks implements Listener
 						if(!e.isCancelled())
 						{
 							if(e.getXP() > 0)
-								if(!VersionUtils.getVersion().contains("v1_9") && !VersionUtils.getVersion().contains("v1_11") && !VersionUtils.getVersion().contains("v1_10")){
-									p.playSound(p.getLocation(), Sound.ORB_PICKUP, 0.6F, rand.nextFloat());
+								if(VersionUtils.above9()){
+									p.playSound(p.getLocation(), Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.6F, rand.nextFloat());
 								}else{
 									try {
 										Class<Enum> cls = (Class<Enum>) Class.forName("org.bukkit.Sound");
-										p.playSound(p.getLocation(), (Sound) Enum.valueOf(cls, "ENTITY_EXPERIENCE_ORB_PICKUP"), 0.6F, rand.nextFloat());
+										p.playSound(p.getLocation(), (Sound) Enum.valueOf(cls, "ORB_PICKUP"), 0.6F, rand.nextFloat());
 									} catch (ClassNotFoundException e1) {
 										e1.printStackTrace();
 									}

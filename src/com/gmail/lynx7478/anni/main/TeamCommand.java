@@ -93,15 +93,16 @@ public class TeamCommand implements CommandExecutor, Listener
 			
 			//TODO: Get a decent fix and remove shit code.
 			
-			if(!VersionUtils.getVersion().contains("13"))
+			if(!VersionUtils.above13())
 			{
+				Material a = (Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "WOOL");
 				ActionMenuItem item = new ActionMenuItem(team.getExternalColoredName(),new ItemClickHandler(){
 					@Override
 					public void onItemClick(ItemClickEvent event)
 					{
 						event.getPlayer().performCommand("Team "+team.getName());
 						event.setWillClose(true);
-					}},new ItemStack(Material.WOOL,0,datavalue),new String[]{});
+					}},new ItemStack(a,0,datavalue),new String[]{});
 				menu.setItem(x, item);
 				x++;
 			}else
@@ -133,12 +134,12 @@ public class TeamCommand implements CommandExecutor, Listener
 		}
 		
 		Material mat;
-		if(!VersionUtils.getVersion().contains("13"))
+		if(!VersionUtils.above13())
 		{
-			mat = Material.WOOL;
+			mat = (Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "WOOL");
 		}else
 		{
-			mat = (Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "WHITE_WOOL");
+			mat = Material.WHITE_WOOL;
 		}
 		menu.setItem(4, new ActionMenuItem(Lang.LEAVE.toString(),new ItemClickHandler(){
 			@Override

@@ -68,16 +68,16 @@ public class ItemMenu
 		this.items = new MenuItem[size.getSize()];
 		this.parent = parent;
 		
-		if(!VersionUtils.getVersion().contains("13"))
+		if(VersionUtils.above13())
 		{
 			EMPTY_SLOT_ITEM = new StaticMenuItem(" ",
-					new ItemStack(Material.STAINED_GLASS_PANE, 1,
-							(byte) 7));
+					new ItemStack(Material.WHITE_STAINED_GLASS_PANE));
 		}else
 		{
 		try {
 			EMPTY_SLOT_ITEM = new StaticMenuItem(" ",
-					new ItemStack((Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material") , "WHITE_STAINED_GLASS_PANE")));
+					new ItemStack((Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material") , "STAINED_GLASS_PANE"), 1,
+							(byte) 7));
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}

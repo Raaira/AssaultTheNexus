@@ -41,17 +41,18 @@ public class Nexus implements Listener
 		this.Team = team;
 		this.Location = null;
 		
-		if(!VersionUtils.getVersion().contains("13") && !VersionUtils.getVersion().contains("v1_9") && !VersionUtils.getVersion().contains("v1_11") && !VersionUtils.getVersion().contains("v1_10"))
+		if(VersionUtils.above9())
 		{
-			anvil = Sound.ANVIL_LAND;
-			explode = Sound.EXPLODE;
-			note = Sound.NOTE_PIANO;
+			anvil = Sound.BLOCK_ANVIL_LAND;
+			explode = Sound.ENTITY_GENERIC_EXPLODE;
+			note = Sound.BLOCK_NOTE_BLOCK_XYLOPHONE;
+			
 		}else
 		{
 			try {
-				anvil = (Sound) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Sound"), "BLOCK_ANVIL_LAND");
-				explode = (Sound) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Sound"), "ENTITY_GENERIC_EXPLODE");
-				note = (Sound) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Sound"), "BLOCK_NOTE_BLOCK_XYLOPHONE");
+				anvil = (Sound) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Sound"), "ANVIL_LAND");
+				explode = (Sound) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Sound"), "EXPLODE");
+				note = (Sound) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Sound"), "NOTE_PIANO");
 			} catch (ClassNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

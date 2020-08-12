@@ -41,10 +41,10 @@ public class Loadout
 	{
 		Loadout r = null;
 		try {
-		if(!VersionUtils.getVersion().contains("13")) {
-			r = addItem(KitUtils.addSoulbound(new ItemStack(Material.WOOD_SWORD)));
+		if(VersionUtils.above13()) {
+			r = addItem(KitUtils.addSoulbound(new ItemStack(Material.WOODEN_SWORD)));
 		}else {
-			r = addItem(KitUtils.addSoulbound(new ItemStack((Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "WOODEN_SWORD"))));
+			r = addItem(KitUtils.addSoulbound(new ItemStack((Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "WOOD_SWORD"))));
 		}
 		}catch(Exception e)
 		{
@@ -72,10 +72,10 @@ public class Loadout
 	{
 		Loadout r = null;
 		try {
-		if(!VersionUtils.getVersion().contains("13")) {
-			r = addItem(KitUtils.addSoulbound(new ItemStack(Material.GOLD_SWORD)));
+		if(VersionUtils.above13()) {
+			r = addItem(KitUtils.addSoulbound(new ItemStack(Material.GOLDEN_SWORD)));
 		}else {
-			r = addItem(KitUtils.addSoulbound(new ItemStack((Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "GOLDEN_SWORD"))));
+			r = addItem(KitUtils.addSoulbound(new ItemStack((Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "GOLD_SWORD"))));
 		}
 		}catch(Exception e)
 		{
@@ -88,10 +88,10 @@ public class Loadout
 	{
 		Loadout r = null;
 		try {
-		if(!VersionUtils.getVersion().contains("13")) {
-			r = addItem(KitUtils.addSoulbound(new ItemStack(Material.WOOD_PICKAXE)));
+		if(VersionUtils.above13()) {
+			r = addItem(KitUtils.addSoulbound(new ItemStack(Material.WOODEN_PICKAXE)));
 		}else {
-			r = addItem(KitUtils.addSoulbound(new ItemStack((Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "WOODEN_PICKAXE"))));
+			r = addItem(KitUtils.addSoulbound(new ItemStack((Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "WOOD_PICKAXE"))));
 		}
 		}catch(Exception e)
 		{
@@ -109,10 +109,10 @@ public class Loadout
 	{
 		Loadout r = null;
 		try {
-		if(!VersionUtils.getVersion().contains("13")) {
-			r = addItem(KitUtils.addSoulbound(new ItemStack(Material.WOOD_AXE)));
+		if(VersionUtils.above13()) {
+			r = addItem(KitUtils.addSoulbound(new ItemStack(Material.WOODEN_AXE)));
 		}else {
-			r = addItem(KitUtils.addSoulbound(new ItemStack((Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "WOODEN_AXE"))));
+			r = addItem(KitUtils.addSoulbound(new ItemStack((Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "WOOD_AXE"))));
 		}
 		}catch(Exception e)
 		{
@@ -125,10 +125,10 @@ public class Loadout
 	{
 		Loadout r = null;
 		try {
-		if(!VersionUtils.getVersion().contains("13")) {
-			r = addItem(KitUtils.addSoulbound(new ItemStack(Material.WOOD_SPADE)));
+		if(VersionUtils.above13()) {
+			r = addItem(KitUtils.addSoulbound(new ItemStack(Material.WOODEN_SHOVEL)));
 		}else {
-			r = addItem(KitUtils.addSoulbound(new ItemStack((Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "WOODEN_SHOVEL"))));
+			r = addItem(KitUtils.addSoulbound(new ItemStack((Material) Enum.valueOf((Class<Enum>) Class.forName("org.bukkit.Material"), "WOOD_SHOVEL"))));
 		}
 		}catch(Exception e)
 		{
