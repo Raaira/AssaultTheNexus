@@ -23,9 +23,9 @@ public class VersionUtils
     {
     	String packageName = Bukkit.getServer().getClass().getPackage().getName();
     	packageName.substring(packageName.lastIndexOf(".") + 1);
-    	if(packageName.contains("v1_9") && packageName.contains("v1_10") && packageName.contains("v1_11")
-    			&& packageName.contains("v1_12") && packageName.contains("v1_13") && packageName.contains("v1_14")
-    			&& packageName.contains("v1_15") && packageName.contains("v1_16"))
+    	if(packageName.contains("v1_9") || packageName.contains("v1_10") || packageName.contains("v1_11")
+    			|| packageName.contains("v1_12") || packageName.contains("v1_13") || packageName.contains("v1_14")
+    			|| packageName.contains("v1_15") || packageName.contains("v1_16"))
     		return true;
     	else
     		return false;
@@ -35,7 +35,7 @@ public class VersionUtils
     {
     	String packageName = Bukkit.getServer().getClass().getPackage().getName();
     	packageName.substring(packageName.lastIndexOf(".") + 1);
-    	if(packageName.contains("v_13") && packageName.contains("v1_14") && packageName.contains("v1_15") && packageName.contains("v1_16"))
+    	if(packageName.contains("v_13") || packageName.contains("v1_14") || packageName.contains("v1_15") || packageName.contains("v1_16"))
     		return true;
     	else
     		return false;
