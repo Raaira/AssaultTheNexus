@@ -26,5 +26,14 @@
 	<classpathentry kind="lib" path="D:/Documents/Java/Libraries/spigot-1.13.1.jar"/>
 	<classpathentry kind="lib" path="D:/Documents/Java/Libraries/spigot-1.13.2.jar"/>
 	<classpathentry kind="lib" path="D:/Documents/Java/Libraries/spigot-1.13.jar"/>
+	<classpathentry kind="lib" path="D:/Documents/Java/Libraries/spigot-1.14.1.jar"/>
+	<classpathentry kind="lib" path="D:/Documents/Java/Libraries/spigot-1.14.2.jar"/>
+	<classpathentry kind="lib" path="D:/Documents/Java/Libraries/spigot-1.14.3.jar"/>
+	<classpathentry kind="lib" path="D:/Documents/Java/Libraries/spigot-1.14.4.jar"/>
+	<classpathentry kind="lib" path="D:/Documents/Java/Libraries/spigot-1.14.jar"/>
+	<classpathentry kind="lib" path="D:/Documents/Java/Libraries/spigot-1.15.1.jar"/>
+	<classpathentry kind="lib" path="D:/Documents/Java/Libraries/spigot-1.15.2.jar"/>
+	<classpathentry kind="lib" path="D:/Documents/Java/Libraries/spigot-1.15.jar"/>
+	<classpathentry kind="lib" path="D:/Documents/Java/Libraries/spigot-1.16.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
